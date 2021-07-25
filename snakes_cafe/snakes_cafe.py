@@ -38,17 +38,23 @@ Unicorn Tears
 ***********************************
 """
 print(menu)
-list_food = []
+listMenu = ["Wings", "Cookies", "Spring Rolls", "Salmon", "Steak", "Meat Tornado",
+            "A Literal Garden", "Ice Cream", "Cake", "Pie", "Coffee", "Tea", "Unicorn Tears"]
 
-for i in range(7):
 
-    order = input()
-    if order in list_food:
-        print(f"{len(list_food)} order of {order} have been added to your meal")
-        list_food['order'].append(order)
-        print(len(list_food[order]))
-    else:
-        list_food.append(order)
-        print(f"1 order of {order} have been added to your meal")
-        print(list_food)
-print(list_food)
+def lab():
+    order = []
+    a = input(' ')
+
+    for i in range(8):
+        if a in listMenu:
+            order.append(a)
+            print(
+                f'** {order.count(a)} order of {a} have been added to your meal **')
+        else:
+            print('please order one of the stuff on the menu!!')
+        a = input(' ')
+
+
+if __name__ == '__main__':
+    lab()
