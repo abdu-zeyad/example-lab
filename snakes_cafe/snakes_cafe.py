@@ -44,9 +44,9 @@ listMenu = ["wings", "cookies", "spring rolls", "salmon", "steak", "meat tornado
 
 def orderfunction():
     order = []
-    a = input(' ')
+    a = input(' ').lower()
+    while a != 'quit':
 
-    for i in range(10):
         if a in listMenu:
             order.append(a)
             print(
