@@ -44,13 +44,13 @@ listMenu = ["wings", "cookies", "spring rolls", "salmon", "steak", "meat tornado
 
 def orderfunction():
     order = []
-    a = input(' ').lower()
+    a = input(' ')
     while a != 'quit':
 
-        if a in listMenu:
-            order.append(a)
+        if a in listMenu or a.lower() in listMenu:
+            order.append(a.lower())
             print(
-                f'* {order.count(a)} order of {a} have been added to your meal *')
+                f'* {order.count(a.lower())} order of {a.lower()} have been added to your meal *')
         else:
             print('please order one of the stuff on the menu!!')
         a = input(' ')
